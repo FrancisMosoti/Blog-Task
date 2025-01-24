@@ -34,6 +34,7 @@
                 </form>
             </div>
         </div>
+        <div><a href="/posts" class="btn btn-secondary">View Posts</a></div>
     </div>
 </div>
 @endsection

@@ -29,7 +29,7 @@ class User extends Authenticatable
      */
     public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Posts::class);
     }
 
     /**
@@ -37,7 +37,7 @@ class User extends Authenticatable
      */
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comments::class);
     }
 
     /**
