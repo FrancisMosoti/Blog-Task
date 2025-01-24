@@ -23,6 +23,23 @@ class User extends Authenticatable
         'password',
     ];
 
+
+    /**
+     * Get all of the posts for the user.
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    /**
+     * Get all of the comments for the user.
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

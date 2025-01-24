@@ -7,7 +7,8 @@
             <div class="card">
                 <div class="card-header">{{ __('Create a Post') }}</div>
 
-                <div class="card-body">
+                <form action="{{route('create.post')}}" method="POST" class="card-body">
+                    @csrf
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -27,7 +28,10 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Post Body</label>
                         <textarea class="form-control" name="body" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
-                </div>
+                      <div>
+                        <button type="submit" class="btn btn-primary">Send Post</button>
+                      </div>
+                </form>
             </div>
         </div>
     </div>
