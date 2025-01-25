@@ -12,7 +12,14 @@ class PostController extends Controller
     {
         $posts = Posts::with('user')->with('comments')->get();
         return $posts;
-        // return view('posts.index', ['posts' => $posts]);
+        
+    }
+    public function show($id)
+    {
+        $posts = Posts::where('user_id', $id)->with('comments.user')->get();
+        
+        return $posts;
+        
     }
 
     public function store(Request $request)
